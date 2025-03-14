@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* Versão Mobile First */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background: black url(../img/back-phone.jpg) no-repeat fixed center center /
+    cover;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.842);
+  width: 80vw;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493);
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+img#phone {
+  display: block;
+}
+
+img#tablet,
+#print,
+#pc,
+#tv {
+  display: none;
+}
+
+/* Todas as demais médias */
+
+/* Typical Device Breakpoints
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+/* Versão para Impressora */
+@media print {
+  /* body{
+       O impressão ela não possui a funiconalidade de deixar uma imagem no fundo. Tornando a linha código abaixo desnecessário. 
+       background: url("../img/back-print.jpg") no-repeat fixed center center / cover; 
+    } */
+
+  main {
+    width: 90vw;
+    border: 2px solid black;
+  }
+
+  main h1 {
+    font-family: "Courier New", Courier, monospace;
+    color: black;
+    text-shadow: none;
+  }
+
+  main::after{
+    content: 'Seu texto foi impresso através do site "www.cursoemvideo.com"';
+    text-decoration: overline;
+  }
+
+  img#phone {
+    display: none;
+  }
+
+  img#print {
+    display: block;
+  }
+}
+
+/* Versão para Tablet */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  body {
+    background: black url("../img/back-tablet.jpg") no-repeat fixed center
+      center / cover;
+  }
+
+  img#phone {
+    display: none;
+  }
+
+  img#tablet {
+    display: block;
+  }
+}
+
+/* Versão para computador(PC) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  body {
+    background: url("../img/back-pc.jpg") no-repeat fixed center center / cover;
+  }
+
+  img#phone {
+    display: none;
+  }
+
+  img#pc {
+    display: block;
+  }
+}
+
+/* Versão para Telas Grandes (TV) */
+@media screen and (min-width: 993px) {
+  body {
+    background: url("../img/back-tv.jpg") no-repeat fixed center center / cover;
+  }
+
+  img#phone {
+    display: none;
+  }
+
+  img#tv {
+    display: block;
+  }
+}
