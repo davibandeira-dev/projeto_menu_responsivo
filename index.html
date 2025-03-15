@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 
-<body>
+<body onresize="mudarTamanho()">
   <header>
     <h1>Meu Site</h1>
     <div><span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span></div>
@@ -45,6 +45,13 @@
     </article>
   </main>
   <script>
+    function mudarTamanho(){
+      if (window.innerWidth >= 769) {
+        imenu.style.display = 'block'
+      }else{
+        imenu.style.display = 'none'
+      }
+    }
     function clickMenu() {
       if (imenu.style.display == 'block') {
         imenu.style.display = 'none'
