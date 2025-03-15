@@ -58,9 +58,9 @@ menu  li > a{
   padding: 5px;
   text-decoration: none;
   color: white;
+  text-align: center;
   list-style-type: none;
   border-top: 1px solid rgb(189, 186, 186);
-  text-align: center;
   transition: background-color 0.5s;
 }
 
@@ -69,9 +69,8 @@ menu li > a:hover{
   background-color: rgb(189, 189, 189);
 }
 
-
 main{
-  width: 90vw;
+  width: 500px;
   background-color: white;
   margin: auto;
   margin-top: 10px;
@@ -89,3 +88,27 @@ article > p {
   text-indent: 20px;
 }
 
+/* Typical Device Breakpoints
+--------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+@media screen and (min-width: 769px){
+
+  header > div{
+    display: none;
+  }
+
+  menu{
+    display: block;
+  }
+
+  menu > ul > li{
+    display: inline-block;
+    width: 100px;
+  }
+}
